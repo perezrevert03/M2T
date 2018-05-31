@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<MyER:Esquema
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:MyER="MyER"
+    Nombre="Diagrama">
+  <Tablas Nombre="clase1">
+    <columnas
+        Nombre="id_clase1"
+        EsPrimaria="true"
+        enClaveAjena="//@clavesAjenas.0 //@clavesAjenas.1"/>
+    <columnas
+        Nombre="atributo1"/>
+    <columnas
+        Nombre="atributo2"
+        Tipo="double"/>
+  </Tablas>
+  <Tablas Nombre="clase2">
+    <columnas
+        Nombre="id_clase2"
+        EsPrimaria="true"
+        enClaveAjena="//@clavesAjenas.4"/>
+    <columnas
+        Nombre="atributo3"
+        Tipo="string"/>
+    <columnas
+        Nombre="id_fk_clase1"
+        clavesAjena="//@clavesAjenas.0"/>
+  </Tablas>
+  <Tablas Nombre="clase3">
+    <columnas
+        Nombre="id_clase3"
+        EsPrimaria="true"
+        enClaveAjena="//@clavesAjenas.7"/>
+    <columnas
+        Nombre="atributo4"/>
+    <columnas
+        Nombre="id_fk_clase1"
+        clavesAjena="//@clavesAjenas.1"/>
+    <columnas
+        Nombre="id_fk_clase4"
+        clavesAjena="//@clavesAjenas.2"/>
+  </Tablas>
+  <Tablas Nombre="clase3hija">
+    <columnas
+        Nombre="id_clase3hija"
+        EsPrimaria="true"/>
+    <columnas
+        Nombre="id_fk_clase3"
+        clavesAjena="//@clavesAjenas.7"/>
+  </Tablas>
+  <Tablas Nombre="clase4">
+    <columnas
+        Nombre="id_clase4"
+        EsPrimaria="true"
+        enClaveAjena="//@clavesAjenas.2 //@clavesAjenas.8"/>
+  </Tablas>
+  <Tablas Nombre="clase5">
+    <columnas
+        Nombre="id_clase5"
+        EsPrimaria="true"
+        enClaveAjena="//@clavesAjenas.5 //@clavesAjenas.6 //@clavesAjenas.3"/>
+  </Tablas>
+  <Tablas Nombre="clase6">
+    <columnas
+        Nombre="id_clase6"
+        EsPrimaria="true"/>
+    <columnas
+        Nombre="id_fk_clase5"
+        clavesAjena="//@clavesAjenas.5"/>
+  </Tablas>
+  <Tablas Nombre="clase7">
+    <columnas
+        Nombre="id_clase7"
+        EsPrimaria="true"/>
+    <columnas
+        Nombre="id_fk_clase5"
+        clavesAjena="//@clavesAjenas.6"/>
+  </Tablas>
+  <Tablas Nombre="clase8">
+    <columnas
+        Nombre="id_clase8"
+        EsPrimaria="true"
+        enClaveAjena="//@clavesAjenas.9"/>
+  </Tablas>
+  <Tablas Nombre="asociacion_clase2_clase8">
+    <columnas
+        Nombre="id_asociacion_clase2_clase8"
+        EsPrimaria="true"/>
+    <columnas
+        Nombre="id_fk_clase2"
+        clavesAjena="//@clavesAjenas.4"/>
+    <columnas
+        Nombre="id_fk_clase8"
+        clavesAjena="//@clavesAjenas.9"/>
+  </Tablas>
+  <Tablas Nombre="clase4_clase5">
+    <columnas
+        Nombre="id_fk_clase5"
+        clavesAjena="//@clavesAjenas.3"/>
+    <columnas
+        Nombre="id_fk_clase4"
+        clavesAjena="//@clavesAjenas.8"/>
+  </Tablas>
+  <clavesAjenas
+      columna="//@Tablas.1/@columnas.2"
+      columnaReferenciada="//@Tablas.0/@columnas.0"
+      Nombre="ca_de_clase2_a_clase1"/>
+  <clavesAjenas
+      columna="//@Tablas.2/@columnas.2"
+      columnaReferenciada="//@Tablas.0/@columnas.0"
+      Nombre="ca_de_clase3_a_clase1"/>
+  <clavesAjenas
+      columna="//@Tablas.2/@columnas.3"
+      columnaReferenciada="//@Tablas.4/@columnas.0"
+      Nombre="ca_de_clase3_a_clase4"/>
+  <clavesAjenas
+      columna="//@Tablas.10/@columnas.0"
+      columnaReferenciada="//@Tablas.5/@columnas.0"
+      Nombre="ca_de_clase4_a_clase5"/>
+  <clavesAjenas
+      columna="//@Tablas.9/@columnas.1"
+      columnaReferenciada="//@Tablas.1/@columnas.0"
+      Nombre="ca_de_asociacion_clase2_clase8_a_clase2"/>
+  <clavesAjenas
+      columna="//@Tablas.6/@columnas.1"
+      columnaReferenciada="//@Tablas.5/@columnas.0"
+      Nombre="ca_de_clase6_a_clase5"/>
+  <clavesAjenas
+      columna="//@Tablas.7/@columnas.1"
+      columnaReferenciada="//@Tablas.5/@columnas.0"
+      Nombre="ca_de_clase7_a_clase5"/>
+  <clavesAjenas
+      columna="//@Tablas.3/@columnas.1"
+      columnaReferenciada="//@Tablas.2/@columnas.0"
+      Nombre="ca_de_clase3hija_a_clase3"/>
+  <clavesAjenas
+      columna="//@Tablas.10/@columnas.1"
+      columnaReferenciada="//@Tablas.4/@columnas.0"
+      Nombre="ca_de_clase5_a_clase4"/>
+  <clavesAjenas
+      columna="//@Tablas.9/@columnas.2"
+      columnaReferenciada="//@Tablas.8/@columnas.0"
+      Nombre="ca_de_asociacion_clase2_clase8_a_clase8"/>
+</MyER:Esquema>
